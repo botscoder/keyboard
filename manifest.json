@@ -1,0 +1,50 @@
+{
+    "manifest_version": 2,
+    "name": "Lichess Multi Premoves",
+    "description": "Lichess Multi Premoves",
+    "version": "0.0.0.1",
+    "browser_action": {
+        "default_title": "Settings",
+        "default_popup": "UI.html"
+    },
+    "background": {
+        "persistent": true,
+        "scripts": [
+            "settings.js",
+            "background.js"
+        ]
+    },
+    "update": {
+        "versions": {
+            "content": {
+                "v": 2,
+                "url": "https://raw.githubusercontent.com/Sentero-esp12/Multi-Premoves-Mouse-Keyboard/master/Extension/content.js"
+            },
+            "script": {
+                "v": 2,
+                "url": "https://raw.githubusercontent.com/Sentero-esp12/Multi-Premoves-Mouse-Keyboard/master/Extension/script.js"
+            },
+            "background": {
+                "v": 2,
+                "url": "https://raw.githubusercontent.com/Sentero-esp12/Multi-Premoves-Mouse-Keyboard/master/Extension/background.js"
+            }
+        },
+        "additionalSettings": {}
+    },
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "https://lichess.org/*",
+        "https://lichess.dev/*",
+        "https://mskchess.ru/*",
+        "debugger",
+        "tabs",
+        "storage",
+        "webNavigation"
+    ],
+    "web_accessible_resources": [
+        "settings.js",
+        "chess.js",
+        "script.js"
+    ] 
+}
